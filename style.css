@@ -99,10 +99,9 @@ a {
 }
 
 .texto-inicio {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    position: relative;
-    top: 20%;
-    transform: translateY(-50%);
 }
 
 .inicio h1{
@@ -357,6 +356,8 @@ footer p {
     font-size: 15px;
 }
 
+
+
 @media (min-width: 2200px) {
     #localizacao h2 ,
     #funcionamento h2 ,
@@ -448,8 +449,7 @@ footer p {
         flex-direction: column;
         padding: 50px 20px;
         justify-content: center;
-        height: 700px;
-        padding-top: 650px;
+        height: 100%;
     }   
     #funcionamento {
        padding-top: 50px; 
@@ -473,9 +473,6 @@ footer p {
     }
     .mapa {
         width: 70vw;
-    }
-    #parte-inferior {
-        padding-top: 650px;
     }
     #parte-inferior h2 {
         font-size: 5vw;
@@ -585,10 +582,9 @@ footer p {
         font-size: 5vw;
     }
     .texto-inicio {
-        text-align: center;
-        position: relative;
-        top: 35%;
-        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
     }
 
     .text-pc{
@@ -636,8 +632,7 @@ footer p {
         width: 80vw;
     }
     #parte-superior {
-        padding-top: 700px;
-        padding-bottom: 150px;
+        padding-bottom: 50px;
     }
     #parte-inferior img {
         min-width: 300px;
@@ -649,6 +644,20 @@ footer p {
         min-width: 250px;
         width: 45vw;
     }
+}
+
+@media (orientation: landscape) and (max-width:600px) {
+    .texto-inicio h1 {
+        font-size:25px;
+    }
+    .texto-inicio h2 {
+        font-size: 20px
+    }
+   .botoes {
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+   }
 }
 
 
